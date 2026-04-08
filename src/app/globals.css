@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #f5f6f8;
+    color: #1A1D27;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-panel-heavy {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .swarm-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .orb-blue {
+    background: rgba(6, 63, 249, 0.15);
+  }
+
+  .orb-pink {
+    background: rgba(255, 46, 147, 0.1);
+  }
+
+  .orb-yellow {
+    background: rgba(255, 235, 59, 0.1);
+  }
+}
