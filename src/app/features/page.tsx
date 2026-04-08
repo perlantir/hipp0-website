@@ -86,9 +86,8 @@ export default function FeaturesPage() {
                 <div className="text-5xl font-bold text-primary/20 font-headline mb-2">78%</div>
                 <div className="text-sm font-bold">Recall@5</div>
                 <div className="text-xs text-on-surface-variant mb-4">+39% over naive RAG</div>
-                <div className="text-3xl font-bold text-primary/15 font-headline mb-1">99%</div>
-                <div className="text-xs font-bold">Recall@10</div>
-                <div className="text-[10px] text-on-surface-variant">+49% over naive RAG</div>
+                <div className="text-2xl font-bold text-primary/15 font-headline mb-1">99%</div>
+                <div className="text-[10px] font-bold">(Recall@10)</div>
               </div>
             </div>
           </div>
@@ -182,8 +181,8 @@ export default function FeaturesPage() {
               </div>
               <code className="text-sm font-mono text-primary">prompt: &quot;design the authentication flow for the new API&quot;</code>
               <div className="mt-4 flex gap-2">
-                <span className="px-2 py-1 rounded bg-green-100 text-green-700 text-[10px] font-bold">COMPILE LATENCY</span>
-                <span className="px-2 py-1 rounded bg-surface text-on-surface-variant text-[10px] font-bold">25ms P95</span>
+                <span className="px-2 py-1 rounded bg-green-100 text-green-700 text-[10px] font-bold">OPTIMIZED RETRIEVAL</span>
+                <span className="px-2 py-1 rounded bg-surface text-on-surface-variant text-[10px] font-bold">25ms</span>
               </div>
             </div>
           </div>
@@ -239,7 +238,7 @@ export default function FeaturesPage() {
             <div>
               <div className="inline-block px-3 py-1 rounded bg-primary/20 text-primary-fixed text-[10px] font-bold uppercase tracking-widest mb-6">Developer First</div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">Built for the multi-agent stack.</h2>
-              <p className="text-lg text-slate-400 mb-10">Deploy an MCP server with 18+ pre-built tools. Hipp0 supports TS SDK, Python SDK, a powerful CLI, and BYOK (Bring Your Own Key) architecture.</p>
+              <p className="text-lg text-slate-400 mb-10">Deploy an MCP server with 12+ pre-built tools. Hipp0 supports TS SDK, Python SDK, a powerful CLI, and BYOK (Bring Your Own Key) architecture.</p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/perlantir/Hipp0/blob/main/docs/api-reference.md" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-on-background rounded-xl font-bold hover:bg-slate-200 transition-colors">Read API Docs</a>
                 <a href="https://github.com/perlantir/Hipp0/blob/main/docs/mcp-setup.md" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white/10 text-white rounded-xl font-bold border border-white/20 hover:bg-white/5 transition-colors">Install SDK</a>

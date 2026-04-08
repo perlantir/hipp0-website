@@ -318,7 +318,7 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
     slug: "mcp-integration-in-5-minutes",
     title: "MCP Integration in 5 Minutes",
     description:
-      "Copy-paste MCP config, connect your agents, and start using 18+ decision memory tools immediately.",
+      "Copy-paste MCP config, connect your agents, and start using 12+ decision memory tools immediately.",
     category: "Quickstart",
     categoryColor: "primary",
     date: "April 7, 2026",
@@ -329,7 +329,7 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
       <h2>What is MCP?</h2>
       <p>
         The Model Context Protocol (MCP) is an open standard for connecting AI models to external tools and data
-        sources. Hipp0 provides a full MCP server that exposes 18+ tools for decision memory operations. Any
+        sources. Hipp0 provides a full MCP server that exposes 12+ tools for decision memory operations. Any
         MCP-compatible agent (Claude, GPT, custom agents) can connect to Hipp0 and immediately start recording,
         querying, and reasoning about decisions.
       </p>
@@ -352,7 +352,7 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
   }
 }</code></pre>
 
-      <h2>Available Tools (18+)</h2>
+      <h2>Available Tools (12+)</h2>
       <p>
         Once connected, your agent has access to the full Hipp0 tool suite. Here are the most commonly used tools:
       </p>

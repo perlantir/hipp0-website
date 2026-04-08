@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function LoginPage() {
-  redirect("https://app.hipp0.ai");
+  redirect("https://github.com/perlantir/Hipp0");
 }

@@ -119,7 +119,7 @@ const changelog: ChangelogEntry[] = [
       },
       {
         type: "feature",
-        text: "18+ MCP tools",
+        text: "12+ MCP tools",
       },
       {
         type: "feature",
