@@ -42,17 +42,11 @@ export default function Footer() {
           </h4>
           <ul className="space-y-4">
             <li><a className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="https://github.com/perlantir/Hipp0" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="https://twitter.com/hipp0ai" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="https://discord.gg/hipp0" target="_blank" rel="noopener noreferrer">Discord</a></li>
           </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-4">
-        <span className="text-xs text-slate-400">© 2026 Hipp0.ai by Perlantir AI Studio. All rights reserved.</span>
-        <div className="flex gap-8">
-          <a className="text-xs text-slate-400 hover:text-blue-600 transition-colors" href="#">Privacy</a>
-          <a className="text-xs text-slate-400 hover:text-blue-600 transition-colors" href="#">Terms</a>
-        </div>
+        <span className="text-xs text-slate-400">© 2026 Perlantir AI Studio. Apache 2.0 Licensed.</span>
       </div>
     </footer>
   );

@@ -20,7 +20,7 @@ interface ChangelogEntry {
 const changelog: ChangelogEntry[] = [
   {
     version: "v0.3.2",
-    date: "March 2026",
+    date: "April 8, 2026",
     title: "Patterns, Capture & Compression",
     items: [
       {
@@ -43,7 +43,7 @@ const changelog: ChangelogEntry[] = [
   },
   {
     version: "v0.3.1",
-    date: "February 2026",
+    date: "April 8, 2026",
     title: "H0C, Wings & Evolution",
     items: [
       {
@@ -70,7 +70,7 @@ const changelog: ChangelogEntry[] = [
   },
   {
     version: "v0.3.0",
-    date: "January 2026",
+    date: "April 7, 2026",
     title: "Full Rebrand & Platform Expansion",
     highlighted: true,
     items: [
@@ -98,7 +98,7 @@ const changelog: ChangelogEntry[] = [
   },
   {
     version: "v0.2.0",
-    date: "December 2025",
+    date: "March 29, 2026",
     title: "Core Intelligence",
     items: [
       {
@@ -133,7 +133,7 @@ const changelog: ChangelogEntry[] = [
   },
   {
     version: "v0.1.0",
-    date: "November 2025",
+    date: "March 8, 2026",
     title: "Initial Release",
     items: [
       {

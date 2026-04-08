@@ -48,8 +48,8 @@ const quickLinks = [
 
 const sdkLinks = [
   { label: "@hipp0/sdk", file: "api-reference.md" },
-  { label: "hipp0-memory", file: "storage.md" },
-  { label: "@hipp0/cli", file: "quickstart.md" },
+  { label: "hipp0-memory (Python)", file: "getting-started.md" },
+  { label: "@hipp0/cli", file: "getting-started.md" },
   { label: "@hipp0/mcp", file: "mcp-setup.md" },
 ];
 

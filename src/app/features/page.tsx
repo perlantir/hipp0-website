@@ -83,9 +83,12 @@ export default function FeaturesPage() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative glass-panel rounded-3xl overflow-hidden shadow-2xl h-[300px] md:h-[400px] flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5">
               <div className="text-center p-8">
-                <div className="text-6xl font-bold text-primary/20 font-headline mb-4">99%</div>
-                <div className="text-sm font-bold">Recall@10</div>
-                <div className="text-xs text-on-surface-variant">+49% over naive RAG</div>
+                <div className="text-5xl font-bold text-primary/20 font-headline mb-2">78%</div>
+                <div className="text-sm font-bold">Recall@5</div>
+                <div className="text-xs text-on-surface-variant mb-4">+39% over naive RAG</div>
+                <div className="text-3xl font-bold text-primary/15 font-headline mb-1">99%</div>
+                <div className="text-xs font-bold">Recall@10</div>
+                <div className="text-[10px] text-on-surface-variant">+49% over naive RAG</div>
               </div>
             </div>
           </div>
@@ -115,7 +118,7 @@ export default function FeaturesPage() {
                 { num: "01", title: "Session Memory", desc: "Instant short-term context injection" },
                 { num: "02", title: "Role Differentiation", desc: "Task-specific persona alignment" },
                 { num: "03", title: "Orchestrator Mode", desc: "High-level logical branching" },
-                { num: "04", title: "Playground Retrieval", desc: "Context verification loop" },
+                { num: "04", title: "Interactive Playground", desc: "Real-time scoring visualization and comparison" },
               ].map((step) => (
                 <div key={step.num} className="flex items-center gap-4 cursor-default">
                   <div className="w-8 h-8 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xs flex-shrink-0">
@@ -179,8 +182,8 @@ export default function FeaturesPage() {
               </div>
               <code className="text-sm font-mono text-primary">prompt: &quot;design the authentication flow for the new API&quot;</code>
               <div className="mt-4 flex gap-2">
-                <span className="px-2 py-1 rounded bg-green-100 text-green-700 text-[10px] font-bold">OPTIMIZED RETRIEVAL</span>
-                <span className="px-2 py-1 rounded bg-surface text-on-surface-variant text-[10px] font-bold">7ms</span>
+                <span className="px-2 py-1 rounded bg-green-100 text-green-700 text-[10px] font-bold">COMPILE LATENCY</span>
+                <span className="px-2 py-1 rounded bg-surface text-on-surface-variant text-[10px] font-bold">25ms P95</span>
               </div>
             </div>
           </div>

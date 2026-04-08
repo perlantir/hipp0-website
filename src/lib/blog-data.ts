@@ -19,8 +19,8 @@ export const blogPosts: BlogPost[] = [
       "Stateless agents are the biggest unsolved problem in multi-agent systems. We built the missing memory layer.",
     category: "Engineering",
     categoryColor: "primary",
-    date: "April 5, 2026",
-    readTime: "12 min",
+    date: "April 8, 2026",
+    readTime: "6 min",
     author: "Nick Gallick",
     authorRole: "Founder",
     content: `
@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
       "A deep technical dive into how Hipp0 ranks decisions using five weighted signals and achieves 78% Recall@5.",
     category: "Technical Deep Dive",
     categoryColor: "secondary",
-    date: "March 28, 2026",
+    date: "April 8, 2026",
     readTime: "15 min",
     author: "Nick Gallick",
     authorRole: "Founder",
@@ -169,10 +169,10 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
       "Why we renamed from DeciGraph to Hipp0, and what a 202-file commit looks like.",
     category: "Company",
     categoryColor: "tertiary",
-    date: "March 15, 2026",
-    readTime: "5 min",
-    author: "Hipp0 Team",
-    authorRole: "Founders",
+    date: "April 7, 2026",
+    readTime: "4 min",
+    author: "Nick Gallick",
+    authorRole: "Founder",
     content: `
       <h2>Why We Changed the Name</h2>
       <p>
@@ -215,10 +215,10 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
       "Step-by-step walkthrough of the Import Wizard: connect GitHub, scan PRs, and build your decision graph.",
     category: "Tutorial",
     categoryColor: "primary",
-    date: "March 8, 2026",
-    readTime: "8 min",
-    author: "Hipp0 Team",
-    authorRole: "Developer Relations",
+    date: "April 7, 2026",
+    readTime: "5 min",
+    author: "Nick Gallick",
+    authorRole: "Founder",
     content: `
       <h2>The Import Wizard</h2>
       <p>
@@ -271,10 +271,10 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
       "How Hipp0's Super Brain orchestrates multi-step workflows with persistent context across agent handoffs.",
     category: "Product",
     categoryColor: "secondary",
-    date: "February 28, 2026",
-    readTime: "10 min",
-    author: "Hipp0 Team",
-    authorRole: "Product",
+    date: "April 7, 2026",
+    readTime: "7 min",
+    author: "Nick Gallick",
+    authorRole: "Founder",
     content: `
       <h2>Beyond Single-Turn Retrieval</h2>
       <p>
@@ -321,10 +321,10 @@ const finalScore = score * temporalDecay(decision.createdAt, halfLifeDays);</cod
       "Copy-paste MCP config, connect your agents, and start using 18+ decision memory tools immediately.",
     category: "Quickstart",
     categoryColor: "primary",
-    date: "February 20, 2026",
+    date: "April 7, 2026",
     readTime: "5 min",
-    author: "Hipp0 Team",
-    authorRole: "Developer Relations",
+    author: "Nick Gallick",
+    authorRole: "Founder",
     content: `
       <h2>What is MCP?</h2>
       <p>

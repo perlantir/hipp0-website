@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 const stats = [
   { value: "778+", label: "Decisions Tracked", color: "bg-primary/10 text-primary" },
   { value: "16", label: "Active Agents", color: "bg-secondary/10 text-secondary" },
-  { value: "127", label: "Commits", color: "glass-panel text-on-background" },
+  { value: "130+", label: "Commits", color: "glass-panel text-on-background" },
   { value: "18+", label: "MCP Tools", color: "glass-panel text-on-background" },
 ];
 
@@ -154,12 +154,13 @@ export default function AboutPage() {
             Nick Gallick
           </h2>
           <p className="mt-4 text-on-surface-variant leading-relaxed">
-            Nick built Hipp0 because he kept watching stateless agents repeat
-            the same mistakes across sessions. After years of building
-            large-scale AI orchestration systems, he decided that decision memory
-            shouldn&apos;t be an afterthought&mdash;it should be infrastructure.
-            Hipp0 is the result: an open-source memory layer purpose-built for
-            multi-agent teams.
+            Nick built Hipp0 after running a 10-agent AI team and watching them
+            contradict each other daily. Agent A decided to use JWT, Agent B
+            picked session cookies, and nobody remembered what happened the day
+            before. After building the internal tooling to fix it, he realized
+            every multi-agent team has this problem. Hipp0 is that tooling&mdash;rebuilt
+            from scratch as open-source infrastructure with a 5-signal scoring
+            engine and zero vendor lock-in.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -168,7 +169,7 @@ export default function AboutPage() {
                 Background
               </span>
               <p className="text-sm text-on-background font-semibold mt-1">
-                SVP @ Global Finance
+                Finance &amp; AI Development
               </p>
             </div>
             <div>
@@ -176,7 +177,7 @@ export default function AboutPage() {
                 Philosophy
               </span>
               <p className="text-sm text-on-background font-semibold mt-1">
-                Persistent Infrastructure
+                Memory is infrastructure, not a feature.
               </p>
             </div>
           </div>
@@ -229,7 +230,7 @@ export default function AboutPage() {
           </a>
 
           <a
-            href="https://perlantir.com"
+            href="https://github.com/perlantir"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-panel-heavy rounded-2xl p-8 text-center hover:shadow-lg transition-all group"

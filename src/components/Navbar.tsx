@@ -53,7 +53,9 @@ export default function Navbar() {
             GitHub
           </a>
           <a
-            href="https://app.hipp0.ai"
+            href="https://github.com/perlantir/Hipp0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold text-sm hover:scale-95 transition-all shadow-[0_0_20px_rgba(6,63,249,0.4)]"
           >
             Get Started

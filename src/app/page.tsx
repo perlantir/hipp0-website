@@ -21,7 +21,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
             >
-              Get Started Free
+              Get Started
             </a>
             <a
               href="https://github.com/perlantir/Hipp0"
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16 md:mb-20 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">The 3-Step Decision Loop</h2>
-            <p className="text-on-surface-variant">The architecture that turns raw agent execution into structured intelligence.</p>
+            <p className="text-on-surface-variant">How decisions flow through the system.</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
             <div className="space-y-8">
@@ -110,10 +110,12 @@ export default function HomePage() {
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
                 </div>
                 <div>
-                  <span className="text-blue-400">hipp0</span>.<span className="text-indigo-300">capture</span>{"({"}
-                  <br />{"  "}action: <span className="text-green-400">&apos;API_CALL&apos;</span>,
-                  <br />{"  "}params: context.vars,
-                  <br />{"  "}logic: <span className="text-green-400">&apos;probabilistic&apos;</span>
+                  <span className="text-blue-400">await</span> client.<span className="text-indigo-300">recordDecision</span>{"({"}
+                  <br />{"  "}title: <span className="text-green-400">&apos;Use JWT with 15-min expiry&apos;</span>,
+                  <br />{"  "}description: <span className="text-green-400">&apos;Chose JWT over session cookies&apos;</span>,
+                  <br />{"  "}made_by: <span className="text-green-400">&apos;backend-agent&apos;</span>,
+                  <br />{"  "}tags: [<span className="text-green-400">&apos;auth&apos;</span>, <span className="text-green-400">&apos;security&apos;</span>],
+                  <br />{"  "}confidence: <span className="text-green-400">&apos;high&apos;</span>,
                   <br />{"})"}
                 </div>
               </div>
@@ -124,25 +126,24 @@ export default function HomePage() {
                 <span className="text-5xl font-bold text-primary opacity-20 font-headline">02</span>
                 <h4 className="text-xl font-bold font-headline">Score</h4>
               </div>
-              <div className="glass-panel p-6 rounded-2xl space-y-4">
+              <div className="glass-panel p-6 rounded-2xl space-y-3">
+                <div className="text-xs font-mono text-on-surface-variant mb-2">&quot;Use JWT for auth&quot; &mdash; score: <span className="text-primary font-bold">0.95</span></div>
                 {[
-                  { label: "Direct Affect", value: 94 },
-                  { label: "Tag Match", value: 82 },
-                  { label: "Persona Match", value: 88 },
-                  { label: "Semantic Similarity", value: 91 },
+                  { label: "directAffect", value: "1.00", weight: "0.30" },
+                  { label: "personaMatch", value: "0.88", weight: "0.25" },
+                  { label: "semanticSimilarity", value: "0.72", weight: "0.25" },
+                  { label: "tagMatch", value: "0.67", weight: "0.20" },
                 ].map((signal) => (
-                  <div key={signal.label} className="space-y-2">
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      <span>{signal.label}</span>
-                      <span className="text-primary">{signal.value}%</span>
-                    </div>
-                    <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-primary rounded-full" style={{ width: `${signal.value}%` }} />
+                  <div key={signal.label} className="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    <span className="font-mono">{signal.label}</span>
+                    <div className="flex gap-3">
+                      <span className="text-primary">{signal.value}</span>
+                      <span className="text-slate-300">{signal.weight} wt</span>
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-on-surface-variant">The 5-Signal engine evaluates truthfulness and utility with automatic tie-breaking logic.</p>
+              <p className="text-sm text-on-surface-variant">Five weighted signals fused into a composite score with automatic tie-breaking logic.</p>
             </div>
             <div className="space-y-8">
               <div className="flex items-center gap-4">
@@ -154,7 +155,7 @@ export default function HomePage() {
                 <div className="text-xs font-mono bg-slate-100 px-3 py-1 rounded-full mb-2">Vector Embedding</div>
                 <div className="text-[10px] text-slate-400 font-mono">dim: 1536 | metric: cosine</div>
               </div>
-              <p className="text-sm text-on-surface-variant">Memory is distilled into vector embeddings and SQL schemas for sub-10ms retrieval.</p>
+              <p className="text-sm text-on-surface-variant">Memory is distilled into vector embeddings and compiled into ranked context packages in under 25ms at P95.</p>
             </div>
           </div>
         </div>
@@ -166,7 +167,7 @@ export default function HomePage() {
           <div className="glass-panel p-8 rounded-4xl md:col-span-2">
             <svg className="w-6 h-6 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
             <h4 className="text-xl font-bold font-headline mb-2">5-Signal Scoring</h4>
-            <p className="text-on-surface-variant">Proprietary evaluation of Agent Logic, Security Posture, RAG Relevancy, Goal Progress, and Token Efficiency.</p>
+            <p className="text-on-surface-variant">Five independent scoring signals &mdash; directAffect, personaMatch, semanticSimilarity, tagMatch, and temporal freshness &mdash; fused with configurable weights for role-specific context ranking.</p>
           </div>
           <div className="bg-primary p-8 rounded-4xl text-white">
             <svg className="w-8 h-8 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
@@ -286,15 +287,14 @@ export default function HomePage() {
             <div className="bg-slate-950 rounded-2xl p-6 text-slate-300 font-mono text-xs shadow-2xl border border-slate-800">
               <div className="flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                <span>hipp0-core --version</span>
+                <span>$ docker compose up -d</span>
               </div>
-              <p className="text-indigo-400 mb-2">&gt; Building the persistent hippocampus...</p>
-              <p className="opacity-80">&gt; Integrating 16 agents from team-alpha</p>
-              <p className="opacity-80">&gt; Initializing vector store [OK]</p>
-              <p className="opacity-80">&gt; Server listening on port 3100</p>
-              <div className="mt-4 flex gap-2">
-                <div className="w-2 h-4 bg-primary animate-pulse" />
-              </div>
+              <p className="text-green-400 mb-1">[+] Running 3/3</p>
+              <p className="opacity-80"> &#10004; Container hipp0-db &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Healthy</p>
+              <p className="opacity-80"> &#10004; Container hipp0-server &nbsp;&nbsp;&nbsp; Healthy</p>
+              <p className="opacity-80"> &#10004; Container hipp0-dashboard &nbsp;Started</p>
+              <p className="text-indigo-400 mt-2">Server listening on port 3100</p>
+              <p className="opacity-80">Dashboard available at port 3200</p>
             </div>
           </div>
         </div>
@@ -317,8 +317,8 @@ export default function HomePage() {
             <div className="glass-panel p-8 rounded-3xl text-left border-primary/20 bg-primary/5 relative overflow-hidden">
               <div className="absolute top-4 right-4 px-2 py-1 bg-primary text-white text-[9px] font-bold rounded uppercase">Coming Soon</div>
               <h4 className="text-xl font-bold font-headline mb-2">Hipp0 Cloud</h4>
-              <p className="text-sm text-on-surface-variant mb-6">Serverless memory. Managed security, high availability, and scaling.</p>
-              <div className="font-bold text-lg mb-6">$0.02 / 1k records</div>
+              <p className="text-sm text-on-surface-variant mb-6">Managed infrastructure. Zero-ops deployment with automatic scaling and backups.</p>
+              <div className="font-bold text-lg mb-6">Coming Soon</div>
               <button className="w-full py-3 bg-primary text-white rounded-xl font-bold hover:shadow-lg transition-all">Join Waitlist</button>
             </div>
           </div>
