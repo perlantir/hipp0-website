@@ -22,7 +22,6 @@ export default function Footer() {
           </h4>
           <ul className="space-y-4">
             <li><Link className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="/features">Features</Link></li>
-            <li><Link className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="/pricing">Pricing</Link></li>
             <li><Link className="text-sm text-slate-500 hover:text-blue-600 transition-colors" href="/changelog">Changelog</Link></li>
           </ul>
         </div>
