@@ -14,7 +14,7 @@ const tiers = [
     features: [
       "Unlimited decisions",
       "Unlimited agents",
-      "3 projects",
+      "Unlimited projects",
       "Self-hosted only",
       "Full MCP / SDK / CLI / Super Brain",
       "GitHub connector only",

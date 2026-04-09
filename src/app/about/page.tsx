@@ -65,7 +65,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
         <div className="md:col-span-7 glass-panel rounded-3xl p-10">
           <span className="inline-block mb-3 px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full bg-primary/10 text-primary">
-            Phase 01
+            Origin
           </span>
           <h3 className="text-2xl font-bold text-on-background mt-2">
             The Real Story

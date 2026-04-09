@@ -85,9 +85,7 @@ export default function FeaturesPage() {
               <div className="text-center p-8">
                 <div className="text-5xl font-bold text-primary/20 font-headline mb-2">78%</div>
                 <div className="text-sm font-bold">Recall@5</div>
-                <div className="text-xs text-on-surface-variant mb-4">+39% over naive RAG</div>
-                <div className="text-2xl font-bold text-primary/15 font-headline mb-1">99%</div>
-                <div className="text-[10px] font-bold">(Recall@10)</div>
+                <div className="text-xs text-on-surface-variant">+39% over naive RAG</div>
               </div>
             </div>
           </div>
@@ -145,7 +143,7 @@ export default function FeaturesPage() {
             <div className="mt-8 md:mt-12 rounded-2xl overflow-hidden border border-white/20 shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5 h-48 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-sm font-bold text-on-surface-variant">Scan &rarr; Preview &rarr; Import</div>
-                <div className="text-xs text-on-surface-variant/60 mt-2">500 decisions in 60 seconds</div>
+                <div className="text-xs text-on-surface-variant/60 mt-2">Bulk import in seconds</div>
               </div>
             </div>
           </div>
