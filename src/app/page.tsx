@@ -178,7 +178,7 @@ export default function HomePage() {
         </div>
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
           <img
-            src="/images/dashboard-preview.png"
+            src="/images/IMG_5191.png"
             alt="Hipp0 Dashboard — Context Compare showing role-differentiated results for two agents"
             className="w-full"
           />
