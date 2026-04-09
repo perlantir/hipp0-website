@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -21,10 +22,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center h-20 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tighter">
-              <span className="text-[#1A1D27]">HIPP</span>
-              <span className="text-[#00C2FF]">0</span>
-            </span>
+            <Image src="/images/hipp0-logo.png" alt="HIPP0" width={140} height={40} className="h-10 w-auto" priority />
           </Link>
           <div className="hidden md:flex gap-6">
             {navLinks.map((link) => (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WaitlistForm from "@/components/WaitlistForm";
 
 export default function HomePage() {
   return (
@@ -374,8 +375,7 @@ export default function HomePage() {
               <p className="text-sm text-on-surface-variant mb-6">Managed infrastructure. Zero-ops deployment with automatic scaling and backups.</p>
               <div className="font-bold text-lg mb-6">Coming Soon</div>
               <div className="space-y-3">
-                <a href="mailto:hello@hipp0.ai?subject=Hipp0%20Cloud%20Waitlist" className="block w-full py-3 bg-primary text-white rounded-xl font-bold hover:shadow-lg transition-all text-center">Join Waitlist</a>
-                <p className="text-xs text-on-surface-variant text-center">Email hello@hipp0.ai to join the Cloud waitlist</p>
+                <WaitlistForm />
               </div>
             </div>
           </div>

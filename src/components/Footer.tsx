@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,10 +7,7 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 px-6 md:px-8 py-20 max-w-7xl mx-auto">
         <div className="col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-4">
-            <span className="text-2xl font-bold tracking-tighter">
-              <span className="text-[#1A1D27]">HIPP</span>
-              <span className="text-[#00C2FF]">0</span>
-            </span>
+            <Image src="/images/hipp0-logo.png" alt="HIPP0" width={120} height={34} className="h-9 w-auto" />
           </Link>
           <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
             Decision memory for AI agent teams. Built by Perlantir AI Studio.

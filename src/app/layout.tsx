@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Hipp0.ai | The Decision Memory Layer for AI Agents",
   description:
     "The decision memory layer that captures context, scores logic, and compiles a long-term hippocampus for multi-agent teams. Open source, Apache 2.0.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Hipp0.ai | Decision Memory for AI Agent Teams",
     description:
