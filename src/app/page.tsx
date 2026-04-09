@@ -11,8 +11,10 @@ export default function HomePage() {
             <span className="text-primary">Hipp0 fixes that.</span>
           </h1>
           <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            The decision memory layer that captures context, scores logic, and
-            compiles a long-term hippocampus for multi-agent teams.
+            The decision memory layer for multi-agent AI teams. Captures what was decided, why, and by whom — then compiles the right context for each agent, every time.
+          </p>
+          <p className="text-sm text-on-surface-variant mt-4 font-mono">
+            Built for engineers shipping multi-agent systems with LangGraph, CrewAI, AutoGen, or OpenAI Agents.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
@@ -55,15 +57,15 @@ export default function HomePage() {
           <div className="flex gap-8 md:gap-12">
             <div className="flex flex-col">
               <span className="text-3xl md:text-4xl font-bold font-headline">778+</span>
-              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">Decisions Indexed</span>
+              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">Decisions Tracked</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-3xl md:text-4xl font-bold font-headline">155+</span>
-              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">Commits Shipped</span>
+              <span className="text-3xl md:text-4xl font-bold font-headline">5</span>
+              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">Frameworks Supported</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-3xl md:text-4xl font-bold font-headline">16</span>
-              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">Active Agents</span>
+              <span className="text-3xl md:text-4xl font-bold font-headline">21</span>
+              <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">MCP Tools</span>
             </div>
           </div>
           <div className="flex flex-wrap gap-6 md:gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
@@ -94,7 +96,7 @@ export default function HomePage() {
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           </div>
           <h3 className="text-2xl font-bold font-headline">Hipp0 remembers</h3>
-          <p className="text-on-surface-variant leading-relaxed">Our persistent decision layer creates a verifiable, queryable history of every logic gate your agent crosses.</p>
+          <p className="text-on-surface-variant leading-relaxed">Our persistent decision layer creates a verifiable, queryable history of every decision your agents make.</p>
         </div>
       </section>
 
@@ -127,7 +129,7 @@ export default function HomePage() {
                   <br />{"})"}
                 </div>
               </div>
-              <p className="text-sm text-on-surface-variant">Capture every internal thought process across the agent team with zero-latency interceptors.</p>
+              <p className="text-sm text-on-surface-variant">Capture every decision across the agent team — who made it, why, and who it affects.</p>
             </div>
             <div className="space-y-8">
               <div className="flex items-center gap-4">
@@ -151,7 +153,7 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-on-surface-variant">Five weighted signals fused into a composite score with automatic tie-breaking logic.</p>
+              <p className="text-sm text-on-surface-variant">Five signals. One score. Agents get context ranked for their exact role — not a one-size-fits-all embedding dump.</p>
             </div>
             <div className="space-y-8">
               <div className="flex items-center gap-4">
@@ -170,7 +172,21 @@ export default function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold font-headline mb-12">The Infrastructure of Insight</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold font-headline">See It In Action</h2>
+          <p className="text-on-surface-variant mt-2">The dashboard gives you 31 views into your decision memory.</p>
+        </div>
+        <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+          <img
+            src="/images/dashboard-preview.png"
+            alt="Hipp0 Dashboard — Context Compare showing role-differentiated results for two agents"
+            className="w-full"
+          />
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 md:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold font-headline mb-12">What's Under the Hood</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="glass-panel p-8 rounded-4xl md:col-span-2">
             <svg className="w-6 h-6 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
@@ -247,14 +263,44 @@ export default function HomePage() {
 
       <section className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold font-headline">How Hipp0 Compares</h2>
+          <p className="text-on-surface-variant mt-2">Decision memory vs. general-purpose memory tools.</p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-slate-200">
+                <th className="text-left py-3 px-4 font-bold">Feature</th>
+                <th className="py-3 px-4 font-bold text-primary">Hipp0</th>
+                <th className="py-3 px-4 text-on-surface-variant">Mem0</th>
+                <th className="py-3 px-4 text-on-surface-variant">Zep</th>
+                <th className="py-3 px-4 text-on-surface-variant">LangMem</th>
+              </tr>
+            </thead>
+            <tbody className="text-on-surface-variant">
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">Decision-specific memory</td><td className="py-3 px-4 text-primary font-bold text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">Role-differentiated context</td><td className="py-3 px-4 text-primary font-bold text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">5-signal scoring</td><td className="py-3 px-4 text-primary font-bold text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">Contradiction detection</td><td className="py-3 px-4 text-primary font-bold text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">Partial</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">MCP server</td><td className="py-3 px-4 text-primary font-bold text-center">21 tools</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">Self-hosted</td><td className="py-3 px-4 text-primary font-bold text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-3 px-4 font-medium text-on-background">Open source</td><td className="py-3 px-4 text-primary font-bold text-center">Apache 2.0</td><td className="py-3 px-4 text-center">Partial</td><td className="py-3 px-4 text-center">&#10003;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+              <tr><td className="py-3 px-4 font-medium text-on-background">Token compression</td><td className="py-3 px-4 text-primary font-bold text-center">10-12x</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td><td className="py-3 px-4 text-center">&#10007;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Proven Performance</h2>
-          <p className="text-on-surface-variant">Benchmarked against industry alternatives with rigorous testing suites.</p>
+          <p className="text-on-surface-variant">We ran the benchmarks. Here's what happened.</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {[
             { value: "78%", label: "Recall@5", detail: "+39% over naive RAG" },
             { value: "0.92", label: "Contradiction F1", detail: "Detection accuracy" },
-            { value: "10-12x", label: "Token Compression", detail: "H0C format" },
+            { value: "10-12x", label: "Token Compression", detail: "H0C (Hipp0 Context) format" },
             { value: "25ms", label: "P95 Latency", detail: "At 500 decisions" },
           ].map((metric) => (
             <div key={metric.label} className="glass-panel p-6 md:p-8 rounded-4xl text-center">
@@ -313,7 +359,7 @@ export default function HomePage() {
         <div className="glass-panel p-10 md:p-16 rounded-6xl text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold font-headline tracking-tight">Give your agents a hippocampus.</h2>
-            <p className="text-lg md:text-xl text-on-surface-variant">Start building persistent agentic flows today.</p>
+            <p className="text-lg md:text-xl text-on-surface-variant">Build once. Your agents remember forever.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div className="glass-panel p-8 rounded-3xl text-left hover:border-primary/40 transition-all group bg-white">
@@ -327,7 +373,10 @@ export default function HomePage() {
               <h4 className="text-xl font-bold font-headline mb-2">Hipp0 Cloud</h4>
               <p className="text-sm text-on-surface-variant mb-6">Managed infrastructure. Zero-ops deployment with automatic scaling and backups.</p>
               <div className="font-bold text-lg mb-6">Coming Soon</div>
-              <a href="mailto:hello@hipp0.ai?subject=Hipp0 Cloud Waitlist" className="block w-full py-3 bg-primary text-white rounded-xl font-bold hover:shadow-lg transition-all text-center">Join Waitlist</a>
+              <div className="space-y-3">
+                <a href="mailto:hello@hipp0.ai?subject=Hipp0%20Cloud%20Waitlist" className="block w-full py-3 bg-primary text-white rounded-xl font-bold hover:shadow-lg transition-all text-center">Join Waitlist</a>
+                <p className="text-xs text-on-surface-variant text-center">Email hello@hipp0.ai to join the Cloud waitlist</p>
+              </div>
             </div>
           </div>
           <div className="inline-flex flex-col gap-4">
