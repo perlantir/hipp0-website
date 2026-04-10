@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
 import {
   Monitor,
   DraftingCompass,
@@ -9,9 +11,45 @@ import {
   Home,
   HelpCircle,
   ChevronRight,
+  Check,
 } from "lucide-react";
 
 export default function PlaygroundMobile() {
+  const [email, setEmail] = useState("");
+  const [emailStatus, setEmailStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [reminderSet, setReminderSet] = useState(false);
+  const [showEmailForm, setShowEmailForm] = useState(false);
+
+  async function handleEmailSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setEmailStatus("sending");
+    try {
+      const res = await fetch("/api/playground/email-reminder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), source: "mobile_fallback" }),
+      });
+      if (res.ok) {
+        setEmailStatus("sent");
+      } else {
+        setEmailStatus("error");
+      }
+    } catch {
+      setEmailStatus("error");
+    }
+  }
+
+  function handleRemindLater() {
+    try {
+      localStorage.setItem("hipp0_playground_reminder", String(Date.now()));
+      setReminderSet(true);
+      setTimeout(() => setReminderSet(false), 3000);
+    } catch {
+      // localStorage might be unavailable
+    }
+  }
+
   return (
     <div className="relative min-h-screen bg-slate-950 text-white overflow-hidden">
       {/* Ambient orbs */}
@@ -41,14 +79,12 @@ export default function PlaygroundMobile() {
       {/* Top nav */}
       <nav className="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-slate-900/60 border-b border-white/10">
         <div className="h-14 px-5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
-              <GitBranch className="w-4 h-4" />
-            </div>
-            <span className="font-bold tracking-tight">Hipp0</span>
-          </div>
-          <button
-            aria-label="More"
+          <Link href="/" className="flex items-center gap-2">
+            <img src="/images/hipp0-logo.png" alt="HIPP0" className="h-7 w-auto" />
+          </Link>
+          <Link
+            href="/"
+            aria-label="Home"
             className="w-9 h-9 rounded-lg hover:bg-white/10 flex items-center justify-center"
           >
             <svg
@@ -62,7 +98,7 @@ export default function PlaygroundMobile() {
               <circle cx="12" cy="12" r="1.5" />
               <circle cx="12" cy="18" r="1.5" />
             </svg>
-          </button>
+          </Link>
         </div>
       </nav>
 
@@ -97,20 +133,68 @@ export default function PlaygroundMobile() {
           agents, rewind time, and split-compare personas.
         </p>
 
-        <button className="mt-8 w-full py-4 rounded-2xl bg-primary text-white font-bold text-sm inline-flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(6,63,249,0.35)]">
-          <Mail className="w-4 h-4" /> Email me the link
-        </button>
+        {/* Email form - expands inline on click */}
+        {!showEmailForm && emailStatus !== "sent" && (
+          <button
+            onClick={() => setShowEmailForm(true)}
+            className="mt-8 w-full py-4 rounded-2xl bg-primary text-white font-bold text-sm inline-flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(6,63,249,0.35)] active:scale-[0.98] transition-transform"
+          >
+            <Mail className="w-4 h-4" /> Email me the link
+          </button>
+        )}
 
-        <div className="mt-4 rounded-2xl backdrop-blur-xl bg-slate-900/60 border border-white/10 p-4 flex items-center gap-3">
+        {showEmailForm && emailStatus !== "sent" && (
+          <form onSubmit={handleEmailSubmit} className="mt-8 space-y-3">
+            <input
+              type="email"
+              autoFocus
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@company.com"
+              required
+              className="w-full px-5 py-4 rounded-2xl bg-slate-900/60 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:border-primary/60"
+            />
+            <button
+              type="submit"
+              disabled={emailStatus === "sending"}
+              className="w-full py-4 rounded-2xl bg-primary text-white font-bold text-sm inline-flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(6,63,249,0.35)] active:scale-[0.98] transition-transform disabled:opacity-60"
+            >
+              <Mail className="w-4 h-4" />
+              {emailStatus === "sending" ? "Sending..." : "Send me the link"}
+            </button>
+            {emailStatus === "error" && (
+              <p className="text-xs text-red-400 text-center">Something went wrong. Try again.</p>
+            )}
+          </form>
+        )}
+
+        {emailStatus === "sent" && (
+          <div className="mt-8 w-full py-4 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-sm inline-flex items-center justify-center gap-2">
+            <Check className="w-4 h-4" /> Link sent! Check your inbox.
+          </div>
+        )}
+
+        {/* Remind me later */}
+        <button
+          onClick={handleRemindLater}
+          disabled={reminderSet}
+          className="mt-4 w-full rounded-2xl backdrop-blur-xl bg-slate-900/60 border border-white/10 p-4 flex items-center gap-3 active:scale-[0.98] transition-transform disabled:opacity-60"
+        >
           <div className="w-10 h-10 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center">
-            <BellRing className="w-4 h-4" />
+            {reminderSet ? <Check className="w-4 h-4" /> : <BellRing className="w-4 h-4" />}
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="text-sm font-semibold">Remind me later</div>
-            <div className="text-xs text-slate-400">We&apos;ll ping you when you&apos;re back at your desk.</div>
+          <div className="flex-1 min-w-0 text-left">
+            <div className="text-sm font-semibold">
+              {reminderSet ? "Reminder set!" : "Remind me later"}
+            </div>
+            <div className="text-xs text-slate-400">
+              {reminderSet
+                ? "We won't show this again today."
+                : "We'll ping you when you're back at your desk."}
+            </div>
           </div>
-          <ChevronRight className="w-4 h-4 text-slate-500" />
-        </div>
+          {!reminderSet && <ChevronRight className="w-4 h-4 text-slate-500" />}
+        </button>
 
         <div className="mt-10">
           <span className="text-[10px] uppercase tracking-wider font-bold text-primary px-2 py-1 rounded-full bg-primary/10 border border-primary/30">
@@ -126,24 +210,24 @@ export default function PlaygroundMobile() {
       {/* Bottom nav */}
       <nav className="fixed bottom-0 inset-x-0 z-40 backdrop-blur-xl bg-slate-900/70 border-t border-white/10">
         <div className="grid grid-cols-3 h-16">
-          {[
-            { label: "Home", icon: Home, active: false },
-            { label: "Support", icon: HelpCircle, active: false },
-            { label: "Desktop", icon: Monitor, active: true },
-          ].map((item) => {
-            const Icon = item.icon;
-            return (
-              <button
-                key={item.label}
-                className={`flex flex-col items-center justify-center gap-1 transition-colors ${
-                  item.active ? "text-primary" : "text-slate-500"
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                <span className="text-[10px] font-semibold">{item.label}</span>
-              </button>
-            );
-          })}
+          <Link
+            href="/"
+            className="flex flex-col items-center justify-center gap-1 text-slate-500 hover:text-white transition-colors"
+          >
+            <Home className="w-4 h-4" />
+            <span className="text-[10px] font-semibold">Home</span>
+          </Link>
+          <Link
+            href="/docs"
+            className="flex flex-col items-center justify-center gap-1 text-slate-500 hover:text-white transition-colors"
+          >
+            <HelpCircle className="w-4 h-4" />
+            <span className="text-[10px] font-semibold">Support</span>
+          </Link>
+          <div className="flex flex-col items-center justify-center gap-1 text-primary">
+            <Monitor className="w-4 h-4" />
+            <span className="text-[10px] font-semibold">Desktop</span>
+          </div>
         </div>
       </nav>
     </div>
