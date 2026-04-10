@@ -19,6 +19,66 @@ interface ChangelogEntry {
 
 const changelog: ChangelogEntry[] = [
   {
+    version: "v0.4.0",
+    date: "April 10, 2026",
+    title: "Production Hardening & Benchmarks",
+    highlighted: true,
+    items: [
+      {
+        type: "feature",
+        text: "LongMemEval benchmark harness (loader, ingester, runner, scorer, CLI)",
+      },
+      {
+        type: "feature",
+        text: "Industry benchmarks roadmap: BEIR, HotpotQA, RULER, CRAG",
+      },
+      {
+        type: "feature",
+        text: "Cost tracking and per-project budget caps",
+      },
+      {
+        type: "feature",
+        text: "Per-agent API keys with scoped permissions",
+      },
+      {
+        type: "feature",
+        text: "Collaboration: comments, approvals, and annotations on decisions",
+      },
+      {
+        type: "feature",
+        text: "Notion, Linear, and Slack connectors",
+      },
+      {
+        type: "feature",
+        text: "Multi-tenant row-level security (RLS) policies",
+      },
+      {
+        type: "feature",
+        text: "Distillery resilience: retry + circuit breaker per provider",
+      },
+      {
+        type: "feature",
+        text: "Weekly digest delivery (email, Slack, webhook)",
+      },
+      {
+        type: "feature",
+        text: "OpenTelemetry traces and metrics",
+      },
+      {
+        type: "feature",
+        text: "Interactive Playground with 50-decision seed data",
+      },
+      {
+        type: "feature",
+        text: "4 pre-built project templates and framework tutorials (CrewAI, LangGraph, OpenAI Agents)",
+      },
+      {
+        type: "improvement",
+        text: "H0C Ultra compression reaches 20-33x token reduction",
+      },
+    ],
+  },
+  {
     version: "v0.3.2",
     date: "April 8, 2026",
     title: "Patterns, Capture & Compression",
