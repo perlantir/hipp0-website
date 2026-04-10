@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center h-20 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/Untitled design 6.png" alt="HIPP0" width={210} height={60} className="h-[60px] w-auto" priority />
+            <Image src="/images/Untitled design 6.png" alt="HIPP0" width={525} height={150} className="h-[150px] w-auto" priority />
           </Link>
           <div className="hidden md:flex gap-6">
             {navLinks.map((link) => (
