@@ -1,3 +1,4 @@
+import LiveDemo from "@/components/LiveDemo";
 import Link from "next/link";
 import LiveDemo from "@/components/LiveDemo";
 import WaitlistForm from "@/components/WaitlistForm";
@@ -355,6 +356,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Live Demo */}
+      <section className="max-w-7xl mx-auto px-6 md:px-8"><div className="glass-panel p-8 md:p-12 rounded-5xl space-y-8"><div className="text-center space-y-3"><h2 className="text-3xl md:text-4xl font-bold font-headline">Try It Now</h2><p className="text-on-surface-variant">See how different agents get different context for the same decisions. No install needed.</p></div><LiveDemo /></div></section>
 
       {/* Final CTA */}
       <section className="max-w-7xl mx-auto px-6 md:px-8">
