@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LiveDemo from "@/components/LiveDemo";
 import WaitlistForm from "@/components/WaitlistForm";
 
 export default function HomePage() {
