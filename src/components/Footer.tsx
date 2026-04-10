@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 px-6 md:px-8 py-20 max-w-7xl mx-auto">
         <div className="col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-4">
-            <Image src="/images/Untitled design 6.png" alt="HIPP0" width={120} height={34} className="h-9 w-auto" />
+            <Image src="/images/Untitled design 6.png" alt="HIPP0" width={180} height={51} className="h-[54px] w-auto" />
           </Link>
           <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
             Decision memory for AI agent teams. Built by Perlantir AI Studio.
